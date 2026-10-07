@@ -48,7 +48,7 @@ which is git-ignored.
 | `loader.css` | Splash screen styles, including the bundled `AMedium` font face |
 | `loader.js` | Splash timing and the redirect to the station |
 | `forge.config.js` | Electron Forge packaging, makers, and Electron fuses |
-| `assets/` | Icons, logo, and the Ancient Medium webfont |
+| `assets/` | Per-platform icons (`.ico`, `.icns`, `.png`), logo, and the Ancient Medium webfont |
 
 ## Configuration
 
@@ -85,9 +85,6 @@ page content.
 
 - Unofficial and unaffiliated with KWSX Radio. Station branding, artwork, and
   audio belong to the station.
-- `assets/` ships a Windows (`.ico`) and a Linux (`.png`) icon. A macOS
-  `.icns` is not included, so macOS builds fall back to the default Electron
-  icon; drop an `assets/favicon.icns` in place to fix that.
 - The player's own UI is what you interact with, so its behaviour (and its
   availability) is controlled upstream.
 
