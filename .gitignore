@@ -1,0 +1,20 @@
+# Dependencies
+node_modules/
+
+# Build output (electron-forge package / make)
+out/
+dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
