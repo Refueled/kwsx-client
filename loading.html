@@ -1,57 +1,24 @@
-<link rel="stylesheet" type="text/css" href="loader.css">
-
-
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src https://radio.cock.institute; object-src 'none'; base-uri 'none'">
+    <title>KWSX - Loading</title>
+
+    <!-- Warm up the connection to the player while the splash screen animates -->
     <link rel="dns-prefetch" href="https://radio.cock.institute/">
     <link rel="preconnect" href="https://radio.cock.institute/">
-    <meta charset="UTF-8">
-    <title>KWSX - Loading</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-        
-        #content {
-            transition: opacity 1s ease-in-out;
-        }
-    </style>
+
+    <link rel="stylesheet" href="loader.css">
+    <script src="loader.js" defer></script>
 </head>
 <body>
     <div id="content">
         <div class="container">
             <div class="loader">
-                    <span class="logofont">KWSX</span>
+                <span class="logofont">KWSX</span>
             </div>
         </div>
-        <!-- Loading content goes here -->
-        
     </div>
-
-    <script>
-        const fadeOutAndRedirect = (url) => {
-            const content = document.getElementById('content');
-            
-            // Fade out the current page
-            content.style.opacity = 0;
-
-            setTimeout(() => {
-                window.location.href = url; // Redirect to external URL
-            }, 1000); // Wait for the CSS transition to finish
-        };
-        
-        window.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
-                fadeOutAndRedirect('https://radio.cock.institute/');
-            }, 2000);
-        });
-    </script>
 </body>
 </html>
-
-

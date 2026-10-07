@@ -1,13 +1,28 @@
+html,
 body {
 	margin: 0;
+	padding: 0;
+	width: 100%;
+	overflow: hidden;
+}
+
+html {
+	height: 100%;
+}
+
+body {
 	background: radial-gradient(#4b4b4b, #000000);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: calc(100vh - 30px); /* Adjust height to account for title bar */
-	overflow: hidden;
+	height: 100%;
 	padding-top: 30px; /* Adjust padding to account for title bar */
 }
+
+#content {
+	transition: opacity 1s ease-in-out;
+}
+
 .container {
 	width: 350px;
 	height: 350px;
@@ -74,4 +89,3 @@ body {
     0%, 100% { transform: rotate(-20deg); }
     50% { transform: rotate(20deg); }
 }
-

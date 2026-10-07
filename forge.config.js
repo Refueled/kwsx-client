@@ -5,13 +5,20 @@ const path = require('path');
 module.exports = {
   packagerConfig: {
     asar: true,
-    icon: path.join(__dirname, 'assets', 'favicon'), // Path to your icon file (without extension)
+    // Extensionless so Packager picks the per-platform icon:
+    // assets/favicon.ico (Windows), assets/favicon.icns (macOS),
+    // assets/favicon.png (Linux).
+    icon: path.join(__dirname, 'assets', 'favicon'),
   },
   rebuildConfig: {},
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
-      config: {},
+      config: {
+        // Icon for the generated Setup.exe; the app's own icon comes from
+        // packagerConfig.icon above.
+        setupIcon: path.join(__dirname, 'assets', 'favicon.ico'),
+      },
     },
     {
       name: '@electron-forge/maker-zip',
