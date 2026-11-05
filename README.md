@@ -1,7 +1,7 @@
 # KWSX Client
 
 A small [Electron](https://www.electronjs.org/) desktop client for
-[KWSX Radio](https://radio.cock.institute/) — internet radio for all.
+[KWSX Radio](https://radio.kwsx.online/) — internet radio for all.
 
 <p align="center">
   <img src="assets/logo.png" alt="KWSX" width="240">
@@ -9,7 +9,7 @@ A small [Electron](https://www.electronjs.org/) desktop client for
 
 The app is a thin native shell around the station's existing web player: it opens a
 native window showing an animated KWSX splash screen, then hands the window over to
-<https://radio.cock.institute/>. There is no local audio engine, no playlist logic,
+<https://radio.kwsx.online/>. There is no local audio engine, no playlist logic,
 and no API keys — the player, the stream, and the metadata all come from the station
 itself.
 
